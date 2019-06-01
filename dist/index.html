@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Doodle Booth</title>
+
+    <link rel="stylesheet" type="text/css" href="res/css/style.css">
+
+    <script src="res/js/init.js"></script>
+    <script src="res/js/canvas.js"></script>
+    <script src="res/js/tool.js"></script>
+    <script src="res/js/color.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <input type="image" src="res/image/icon.png">
+    </div>
+
+    <div class="navspace"></div>
+
+    <div class="workspace">
+      <canvas class="canvas" id="canvas" width="1920" height="1080"></canvas>
+    </div>
+
+    <div class="toolspace" id="toolspace">
+      <div class="color">
+        <div class="color_picker" id="color_picker">
+          <canvas id="color_block" height="150" width="150"></canvas>
+
+          <canvas id="color_strip" height="150" width="20"></canvas>
+        </div>
+
+        <div class="color_label">
+          <canvas id="color_label" height="20" width="175"></canvas>
+        </div>
+      </div>
+
+      <div class="ranger">
+        <div>
+          <input type="image" src="res/image/pencil.png">
+
+          <input id="brush" type="range" min="15" max="100" value="15">
+        </div>
+
+        <div>
+          <input type="image" src="res/image/eraser.png">
+
+          <input id="clear" type="range" min="15" max="100" value="15">
+        </div>
+
+        <div>
+          <input type="image" src="res/image/hollow_circle.png">
+
+          <input id="hollow" type="range" min="15" max="100" value="15">
+        </div>
+
+        <div>
+          <input type="image" src="res/image/alpha.png">
+
+          <input id="alpha" type="range" min="0" max="1" step="0.01" value="0">
+        </div>
+      </div>
+
+      <!--<input-->
+      <!--id="text"-->
+      <!--type="image"-->
+      <!--src="res/image/text.png"-->
+      <!--width="32"-->
+      <!--height="32"-->
+      <!--/>-->
+
+      <div class="col">
+        <div>
+          <input id="cursor" type="image" src="res/image/cursor.png">
+        </div>
+
+        <div>
+          <input id="hollow_circle" type="image" src="res/image/hollow_circle.png">
+        </div>
+
+        <div>
+          <input id="solid_circle" type="image" src="res/image/solid_circle.png">
+        </div>
+
+        <div>
+          <input id="undo" type="image" src="res/image/undo.png">
+        </div>
+      </div>
+
+      <div class="col">
+        <div>
+          <input id="pencil" type="image" src="res/image/pencil.png">
+        </div>
+
+        <div>
+          <input id="hollow_triangle" type="image" src="res/image/hollow_triangle.png">
+        </div>
+
+        <div>
+          <input id="solid_triangle" type="image" src="res/image/solid_triangle.png">
+        </div>
+
+        <div>
+          <input id="redo" type="image" src="res/image/redo.png">
+        </div>
+      </div>
+
+      <div class="col">
+        <div>
+          <input id="eraser" type="image" src="res/image/eraser.png">
+        </div>
+
+        <div>
+          <input id="hollow_rectangle" type="image" src="res/image/hollow_rectangle.png">
+        </div>
+
+        <div>
+          <input id="solid_rectangle" type="image" src="res/image/solid_rectangle.png">
+        </div>
+
+        <div>
+          <a id="link" download="image.png">
+            <input id="download" type="image" src="res/image/download.png">
+          </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div>
+          <input id="reset" type="image" src="res/image/reset.png">
+        </div>
+
+        <div>
+          <div class="upload">
+            <label for="upload">
+              <img src="res/image/upload.png">
+            </label>
+
+            <input id="upload" type="file" onchange="readURL(this)" targetid="image" accept="image/gif, image/jpeg, image/png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
